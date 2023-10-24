@@ -1,0 +1,145 @@
+steps:
+  STG_SRC_NETFLIX_SEARCH-fbeda879-626d-4ca6-b195-b807013a854d:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: WORK
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ec284d51-e1f0-42f3-82f8-297207c73978
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: e9fd8ba9-230c-4a47-a41a-521e89274cdc
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - columnReference:
+              columnCounter: 3deaf107-2817-4be1-b6e5-f9e6ea4d151e
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 33987003-9a07-4dfe-a0b1-4d3d09d34a3c
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - columnReference:
+              columnCounter: 9c384bbb-c9b5-4b91-9c00-6f5b827d5486
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 72fcf533-421f-4bde-ae6f-7b9547cdd6fa
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - columnReference:
+              columnCounter: 534dd837-d9ba-4079-927b-764712f1dfe8
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IMDBRATING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: d2c8941e-f00f-4615-b7b4-212463d06ff0
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - columnReference:
+              columnCounter: 73c35ee6-2b49-440a-b955-c4aba309da18
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYNOPSIS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 42b4a87e-f52f-41b4-882a-4c7122f018cf
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - columnReference:
+              columnCounter: 4be12b86-c90a-4ed5-beb3-2e491a9ba614
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: UPDATED_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 0fccb08f-a296-4709-ba42-20ee7577564e
+                    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 293b1c60-b0eb-40d8-9e84-b510e62fab99
+              stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: WATCH_PRIORITY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: |-
+                  case when imdbrating >= 9 then 'Classic - must see'
+                  when imdbrating between 8.5 and 9 then 'Priority watch'
+                  when imdbrating between 8 and 8.5 then 'Meh'
+                  when imdbrating <= 8 then 'Waste of time' end
+            systemColumnType: None
+            transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: SRC_NETFLIX_SEARCH
+            join:
+              joinCondition: FROM {{ ref('WORK', 'SRC_NETFLIX_SEARCH') }} "SRC_NETFLIX_SEARCH"
+            name: STG_SRC_NETFLIX_SEARCH
+            noLinkRefs: []
+      name: STG_SRC_NETFLIX_SEARCH
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: fbeda879-626d-4ca6-b195-b807013a854d
