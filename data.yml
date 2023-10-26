@@ -1,6 +1,13 @@
 defaultStorageMapping: MAIN_STORAGE
 installedPackages: {}
-jobs: {}
+jobs:
+  Job-1:
+    excludeSelector: ""
+    id: 1
+    includeSelector: "{nodeType:}"
+    name: NetflixSearch
+    steps: []
+    subgraphs: []
 locations:
   MAIN_STORAGE:
     mappingDefinitions:
