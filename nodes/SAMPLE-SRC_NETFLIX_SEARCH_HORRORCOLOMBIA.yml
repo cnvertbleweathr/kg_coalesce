@@ -1,12 +1,12 @@
 steps:
-  SRC_NETFLIX_SEARCH-534419c0-752a-45d0-bfdf-43861a36a5c5:
+  SRC_NETFLIX_SEARCH_HORRORCOLOMBIA-fc0be8cc-7938-4300-bf06-172fdb1acbd0:
     operation:
       database: ""
       dataset: ""
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: WORK
+      locationName: SAMPLE
       metadata:
         columns:
           - acceptedValues:
@@ -14,8 +14,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: e9fd8ba9-230c-4a47-a41a-521e89274cdc
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: 7eca0751-005b-47b7-a436-fb3227321b8f
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -29,8 +29,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 33987003-9a07-4dfe-a0b1-4d3d09d34a3c
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: 2b7d4f45-a86f-488f-8fab-369c4314fc78
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -44,8 +44,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 72fcf533-421f-4bde-ae6f-7b9547cdd6fa
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: dc897fa5-3eb0-42a2-8eba-995c5a798574
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -59,8 +59,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: d2c8941e-f00f-4615-b7b4-212463d06ff0
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: 0ed54a1a-373b-4a5d-a85b-7d20f5f122db
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -74,8 +74,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 42b4a87e-f52f-41b4-882a-4c7122f018cf
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: 8c5749da-56d7-419c-a37e-612177039961
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: VARCHAR(16777216)
             defaultValue: ""
@@ -89,8 +89,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 0fccb08f-a296-4709-ba42-20ee7577564e
-              stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+              columnCounter: a429b071-43c7-4505-9f92-01b04e3683ad
+              stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0
             config: {}
             dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
@@ -100,10 +100,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('WORK', 'SRC_NETFLIX_SEARCH') }}
-      name: SRC_NETFLIX_SEARCH
+          joinCondition: FROM {{ ref('SAMPLE', 'SRC_NETFLIX_SEARCH_HORRORCOLOMBIA') }}
+      name: SRC_NETFLIX_SEARCH_HORRORCOLOMBIA
       schema: ""
       sqlType: Source
-      table: SRC_NETFLIX_SEARCH
+      table: SRC_NETFLIX_SEARCH_HORRORCOLOMBIA
       type: sourceInput
-    stepCounter: 534419c0-752a-45d0-bfdf-43861a36a5c5
+    stepCounter: fc0be8cc-7938-4300-bf06-172fdb1acbd0

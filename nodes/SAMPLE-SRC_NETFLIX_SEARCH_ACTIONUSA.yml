@@ -1,0 +1,109 @@
+steps:
+  SRC_NETFLIX_SEARCH_ACTIONUSA-41e772a5-371a-4b67-96d9-e4fcc7f689c2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c04e898a-dc11-4a5b-bf03-d99897703108
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: ID
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e4996ff4-d4e1-4140-a0e1-6e7be08e1411
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: TITLE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b15cdfc-8abd-4230-8c91-6bbfa17b46d4
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: YEAR
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 64e735b2-24d4-455f-b1a2-6eebe00f8f45
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: IMDBRATING
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dd68ed39-67f8-4ca2-8868-6cf2103a8823
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: SYNOPSIS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3809a227-2705-49c3-a859-50212480aed1
+              stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: UPDATED_DATE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'SRC_NETFLIX_SEARCH_ACTIONUSA') }}
+      name: SRC_NETFLIX_SEARCH_ACTIONUSA
+      schema: ""
+      sqlType: Source
+      table: SRC_NETFLIX_SEARCH_ACTIONUSA
+      type: sourceInput
+    stepCounter: 41e772a5-371a-4b67-96d9-e4fcc7f689c2

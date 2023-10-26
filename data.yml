@@ -1988,6 +1988,5 @@ subgraphs:
   Subgraph-1:
     id: "1"
     name: New Subgraph
-    steps:
-      - 534419c0-752a-45d0-bfdf-43861a36a5c5
+    steps: []
 version: 2
