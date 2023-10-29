@@ -14,88 +14,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a7bf6ae6-b8ed-40ba-9801-41badda06290
+              columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
               stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARIANT
             defaultValue: ""
             description: ""
-            name: ID
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 3ccc7670-f3c9-4143-93ff-66d424962e77
-              stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: TITLE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 20d374ba-b730-4ccd-bec7-77114f2a6568
-              stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: YEAR
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: dc6f72ed-b0ac-4199-9eeb-6599af87c2eb
-              stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: IMDBRATING
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a561e627-a9e5-4c45-b024-3b0be1fe45b1
-              stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
-            config: {}
-            dataType: VARCHAR(16777216)
-            defaultValue: ""
-            description: ""
-            name: SYNOPSIS
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: a7851a35-8161-479d-ad26-c844b88d9bc2
-              stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
-            config: {}
-            dataType: TIMESTAMP_NTZ(9)
-            defaultValue: ""
-            description: ""
-            name: UPDATED_DATE
+            name: DATA_VALUE
             nullable: true
             primaryKey: false
             uniqueKey: false

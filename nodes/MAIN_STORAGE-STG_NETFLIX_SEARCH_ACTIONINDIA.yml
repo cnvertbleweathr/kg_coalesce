@@ -1,0 +1,123 @@
+steps:
+  STG_NETFLIX_SEARCH_ACTIONINDIA-1ad0fda0-08a3-4fb2-8560-8be45433c7b7:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isMultisource: false
+      locationName: MAIN_STORAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e7ab037d-e930-4db4-b3b8-d4d0391d49e1
+              stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
+            config: {}
+            dataType: STRING
+            description: ""
+            name: ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
+                    stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
+                transform: "\"DATA_VALUE_results\".value:\"imdb_id\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 68449137-e86d-4eb1-84be-04b5add17a17
+              stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
+            config: {}
+            dataType: STRING
+            description: ""
+            name: YEAR
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
+                    stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
+                transform: "\"DATA_VALUE_results\".value:\"year\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8231faf9-8f6e-42ab-8bd0-04f3bcd78ce0
+              stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
+            config: {}
+            dataType: STRING
+            description: ""
+            name: TITLE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
+                    stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
+                transform: "\"DATA_VALUE_results\".value:\"title\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: dcb314f9-e22a-4c8f-a383-1a31ed7c8746
+              stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
+            config: {}
+            dataType: NUMBER(38, 0)
+            description: ""
+            name: IMDBRATING
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
+                    stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
+                transform: "\"DATA_VALUE_results\".value:\"rating\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 63f6bb72-102e-4f00-b042-8282c86363cb
+              stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
+            config: {}
+            dataType: STRING
+            description: ""
+            name: SYNOPSIS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78c5e09a-682e-4e3f-93a6-86954b268fd6
+                    stepCounter: 3a98b9ba-cf52-4c25-b357-aa283c77c4a7
+                transform: "\"DATA_VALUE_results\".value:\"synopsis\"::STRING"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SAMPLE
+                nodeName: SRC_NETFLIX_SEARCH_ACTIONINDIA
+            join:
+              joinCondition: |-
+                FROM {{ ref('SAMPLE', 'SRC_NETFLIX_SEARCH_ACTIONINDIA') }} "SRC_NETFLIX_SEARCH_ACTIONINDIA", 
+                lateral flatten(input => "DATA_VALUE":"results", OUTER => TRUE) "DATA_VALUE_results"
+            name: STG_NETFLIX_SEARCH_ACTIONINDIA
+            noLinkRefs: []
+      name: STG_NETFLIX_SEARCH_ACTIONINDIA
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
