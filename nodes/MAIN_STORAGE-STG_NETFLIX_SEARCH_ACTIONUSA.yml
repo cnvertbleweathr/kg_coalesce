@@ -75,7 +75,7 @@ steps:
               columnCounter: fd9e6b62-615c-4b64-888a-eb111da5f84f
               stepCounter: 9b2e671c-ba1d-47d9-ac1f-3589f35e2901
             config: {}
-            dataType: NUMBER(38, 0)
+            dataType: STRING
             description: ""
             name: IMDBRATING
             nullable: true
