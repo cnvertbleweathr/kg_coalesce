@@ -16,7 +16,9 @@ steps:
       metadata:
         appliedNodeTests: []
         columns:
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+            columnReference:
               columnCounter: e57cc002-ec32-4fd2-b131-2f3bbd8cf98d
               stepCounter: 1e96e073-d345-42cd-829e-144e57aa6842
             dataType: VARCHAR(5000)
@@ -42,7 +44,9 @@ steps:
                   - columnCounter: 6f55311b-f1ed-4d71-8da3-3a3ff29c5421
                     stepCounter: 573d0860-83dc-409c-893b-2a76d030c7b6
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+            columnReference:
               columnCounter: 391f73a7-7c74-4651-a200-5e1efe4ea706
               stepCounter: 1e96e073-d345-42cd-829e-144e57aa6842
             dataType: VARCHAR(5000)
@@ -68,7 +72,9 @@ steps:
                   - columnCounter: eca85d70-0ac7-44e8-ac86-094b57cbf65f
                     stepCounter: 573d0860-83dc-409c-893b-2a76d030c7b6
                 transform: UPPER("TITLE")
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+            columnReference:
               columnCounter: c16f64d6-20c5-445e-89c2-01c82e57cf9a
               stepCounter: 1e96e073-d345-42cd-829e-144e57aa6842
             dataType: VARCHAR(5000)
@@ -94,7 +100,9 @@ steps:
                   - columnCounter: 0ef0daa6-d90d-4865-a68a-0ebfbe576a1b
                     stepCounter: 573d0860-83dc-409c-893b-2a76d030c7b6
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+            columnReference:
               columnCounter: 4f5c4118-11ea-41ab-b69d-d3f6030ae65f
               stepCounter: 1e96e073-d345-42cd-829e-144e57aa6842
             dataType: VARCHAR(5000)
@@ -120,7 +128,9 @@ steps:
                   - columnCounter: bbcf4de7-5fbe-4460-adff-834c981903c6
                     stepCounter: 573d0860-83dc-409c-893b-2a76d030c7b6
                 transform: ""
-          - columnReference:
+          - appliedColumnTests:
+              hasNull: false
+            columnReference:
               columnCounter: 96bd05fa-905b-4165-bfc3-77190fe3c2df
               stepCounter: 1e96e073-d345-42cd-829e-144e57aa6842
             dataType: VARCHAR(5000)
@@ -146,7 +156,8 @@ steps:
                   - columnCounter: e927311e-b68b-404b-8c7e-7957c4d936b1
                     stepCounter: 573d0860-83dc-409c-893b-2a76d030c7b6
                 transform: ""
-        enabledColumnTestIDs: []
+        enabledColumnTestIDs:
+          - hasNull
         sourceMapping:
           - aliases:
               STG_NETFLIX_SEARCH_ACTIONINDIA: 1ad0fda0-08a3-4fb2-8560-8be45433c7b7
